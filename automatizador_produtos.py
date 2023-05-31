@@ -46,10 +46,12 @@ def adicionar_produto(nome, preco, quantidade, _id, caminho_arquivo):
             escritor.writeheader()
         escritor.writerow(novo_produto)
 
+#pega o id do produto que o usuario gostaria de remover da lista 
 def remove_produto(caminho_arquivo):
     escolha = input("Qual é o ID do produto que você gostaria de remover? ")
     remover_produto(caminho_arquivo, escolha)
 
+#pega o id que o usuario passou e procura dentro da index 0 onde esta o _id, assim adicionando esse produto em uma lista para depois ser removida
 def remover_produto(caminho_arquivo, escolha):
     linhas_removidas = []
     produtos_atualizados = []
